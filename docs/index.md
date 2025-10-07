@@ -11,6 +11,9 @@ Bienvenue. Ce site regroupe les règles, attentes et livrables du module. Le pé
 - [Exemples et sujets de discussion](./examples.md)
 - [Tests FE/BE (unit, intégration, e2e)](./testing.md)
 
+## Ressources
+- [Guide – API First avec OpenAPI (PDF)](./ressources/openApi.pdf)
+
 ## Objectifs pédagogiques (synthèse)
 - Superviser la coordination FE/BE (réunions, décisions, traçabilité, PR reviews).
 - Concevoir des contrats d’API REST en mode contract-first (OpenAPI 3.1).
