@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide – API First avec OpenAPI</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 2cm;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: white;
+            padding: 40px;
+            max-width: 210mm;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #2563eb;
+        }
+        
+        .header h1 {
+            color: #1e40af;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .header .icon {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        
+        .objective {
+            background: #eff6ff;
+            padding: 20px;
+            border-left: 4px solid #2563eb;
+            margin-bottom: 30px;
+            border-radius: 4px;
+        }
+        
+        .objective h2 {
+            color: #1e40af;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+            page-break-inside: avoid;
+        }
+        
+        .section h2 {
+            color: #1e40af;
+            font-size: 24px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #93c5fd;
+        }
+        
+        .section h3 {
+            color: #2563eb;
+            font-size: 18px;
+            margin: 20px 0 10px 0;
+        }
+        
+        .quote-box {
+            background: #f0f9ff;
+            border-left: 4px solid #0ea5e9;
+            padding: 15px 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #0c4a6e;
+            font-size: 16px;
+        }
+        
+        ul {
+            margin-left: 25px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .tools-list {
+            background: #fef3c7;
+            padding: 15px 20px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+        
+        .tools-list ul {
+            margin-left: 20px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            page-break-inside: avoid;
+        }
+        
+        th {
+            background: #2563eb;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+        
+        tr:nth-child(even) {
+            background: #f8fafc;
+        }
+        
+        .steps {
+            counter-reset: step-counter;
+        }
+        
+        .step {
+            margin-bottom: 25px;
+            padding-left: 40px;
+            position: relative;
+        }
+        
+        .step::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #2563eb;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .summary-box {
+            background: #dcfce7;
+            border: 2px solid #16a34a;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        
+        .summary-box h2 {
+            color: #15803d;
+            margin-bottom: 15px;
+        }
+        
+        code {
+            background: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            color: #be123c;
+        }
+        
+        .print-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        
+        .print-button:hover {
+            background: #1e40af;
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+            }
+            
+            .print-button {
+                display: none;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="print-button" onclick="window.print()">🖨️ Imprimer / Sauvegarder en PDF</button>
+    
+    <div class="header">
+        <div class="icon">📘</div>
+        <h1>Guide – API First avec OpenAPI</h1>
+    </div>
+    
+    <div class="objective">
+        <h2>🎯 Objectif</h2>
+        <p>Avant d'écrire une seule ligne de code backend, vous allez concevoir et documenter votre API à l'aide d'OpenAPI. L'approche API First consiste à définir le contrat d'échange entre le front et le back avant toute implémentation, pour garantir une bonne coordination.</p>
+    </div>
+    
+    <div class="section">
+        <h2>🧩 1. Comprendre la philosophie API First</h2>
+        <p>API First, c'est l'idée suivante :</p>
+        <div class="quote-box">
+            "On commence par définir ce que l'API doit faire avant de coder comment elle le fait."
+        </div>
+        <p>Cela permet :</p>
+        <ul>
+            <li>De valider les besoins fonctionnels avant le développement.</li>
+            <li>De travailler en parallèle (le front peut commencer dès que la spec est prête).</li>
+            <li>D'avoir une source de vérité unique (la spec OpenAPI).</li>
+            <li>D'éviter les mauvaises surprises d'intégration à la fin.</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>🧠 2. Qu'est-ce qu'OpenAPI ?</h2>
+        <p>OpenAPI (anciennement Swagger) est un standard de description d'API REST. C'est un fichier <code>.yaml</code> ou <code>.json</code> qui décrit :</p>
+        <ul>
+            <li>Les endpoints disponibles (<code>/users</code>, <code>/login</code>, <code>/products</code>…),</li>
+            <li>Les méthodes HTTP utilisées (GET, POST, PUT, DELETE…),</li>
+            <li>Les paramètres et corps de requêtes,</li>
+            <li>Les réponses attendues,</li>
+            <li>Et les types de données échangés.</li>
+        </ul>
+        <p><strong>Ce fichier devient :</strong></p>
+        <ul>
+            <li>Une documentation vivante,</li>
+            <li>Une base de génération automatique (types, clients, mocks, etc.),</li>
+            <li>Et un contrat officiel entre front et back.</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>🧰 3. Étapes pour travailler en API First</h2>
+        <div class="steps">
+            <div class="step">
+                <h3>Étape 1 – Créer la spec OpenAPI</h3>
+                <ul>
+                    <li>Créez un fichier <code>openapi.yaml</code> à la racine du repo backend (ou dans un dossier <code>/docs</code>).</li>
+                    <li>Décrivez vos routes principales : endpoints, entrées, sorties, statuts HTTP.</li>
+                    <li>Vous pouvez utiliser des outils graphiques comme :</li>
+                </ul>
+                <div class="tools-list">
+                    <ul>
+                        <li>Stoplight Studio</li>
+                        <li>Swagger Editor</li>
+                        <li>Insomnia Designer</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="step">
+                <h3>Étape 2 – Publier la spec</h3>
+                <ul>
+                    <li>Rendez-la accessible dans votre repo (ex: <code>/docs/openapi.yaml</code>).</li>
+                    <li>Ajoutez un moyen de visualisation automatique : Swagger UI, Redoc ou Stoplight pour naviguer dans la documentation.</li>
+                </ul>
+            </div>
+            
+            <div class="step">
+                <h3>Étape 3 – Utiliser la spec côté front</h3>
+                <ul>
+                    <li>Le frontend ne code pas "au hasard" : il génère ses types et services HTTP directement depuis la spec.</li>
+                    <li>Cela évite les divergences entre ce que le back renvoie et ce que le front attend.</li>
+                </ul>
+            </div>
+            
+            <div class="step">
+                <h3>Étape 4 – Implémenter ensuite le backend</h3>
+                <ul>
+                    <li>Le backend code les routes en se conformant strictement à la spec.</li>
+                    <li>Chaque endpoint doit respecter les schémas de requêtes et réponses définis.</li>
+                    <li>Si la spec change, on incrémente la version (ex: v1.1) et on documente le changement.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>🧪 4. Bonus – Mock et tests rapides</h2>
+        <p>Avant que le backend soit prêt, vous pouvez simuler les réponses de l'API grâce à la spec :</p>
+        <ul>
+            <li>Utilisez <strong>Prism</strong> ou <strong>Swagger Mock Server</strong> pour générer un serveur mock.</li>
+            <li>Cela permet au frontend de tester son intégration même sans backend fonctionnel.</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>🧩 5. Livrables attendus pour l'équipe</h2>
+        <p>Pour chaque équipe (back ou front), les éléments suivants doivent exister :</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Élément</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>openapi.yaml</code></td>
+                    <td>Spécification complète de l'API</td>
+                </tr>
+                <tr>
+                    <td>Documentation</td>
+                    <td>Swagger UI / Redoc accessible</td>
+                </tr>
+                <tr>
+                    <td>Postman Collection</td>
+                    <td>Synchronisée automatiquement depuis la spec</td>
+                </tr>
+                <tr>
+                    <td>Types générés</td>
+                    <td>Types utilisés côté front à partir de la spec</td>
+                </tr>
+                <tr>
+                    <td>Versioning</td>
+                    <td>Numéro de version et changelog en cas de modification</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="summary-box">
+        <h2>💬 6. En résumé</h2>
+        <p><strong>L'API First, c'est concevoir avant de coder.</strong></p>
+        <p>C'est une démarche de collaboration et de rigueur :</p>
+        <ul>
+            <li>Une communication claire entre les équipes front et back,</li>
+            <li>Une documentation fiable et toujours à jour,</li>
+            <li>Un gain de temps énorme à long terme.</li>
+        </ul>
+    </div>
+</body>
+</html>
