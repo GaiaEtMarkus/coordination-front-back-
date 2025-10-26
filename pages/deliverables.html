@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livrables - Coordination Front & Back</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../assets/images/logo.jpeg" alt="YNOV Campus" class="logo-img">
+                <span class="logo-text">Coordination Front & Back</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#programme" class="nav-link">Programme</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#projet" class="nav-link">Projet API First</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        <i class="fas fa-calendar-alt"></i> Ressources
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="api-first.html" class="dropdown-item">Guide API First</a>
+                        <a href="gitflow.html" class="dropdown-item">GitFlow & Agile</a>
+                        <a href="project-management.html" class="dropdown-item">Gestion de Projet</a>
+                        <a href="deliverables.html" class="dropdown-item active">Livrables</a>
+                        <a href="testing.html" class="dropdown-item">Tests</a>
+                        <a href="deployment.html" class="dropdown-item">Déploiement</a>
+                        <a href="github-workflow.html" class="dropdown-item">GitHub Workflow</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Livrables V1</h1>
+                <h2 class="hero-subtitle">Checklist complète pour valider votre V1</h2>
+                <p class="hero-description">
+                    Utilisez cette checklist pour valider votre V1 et vous assurer que tous les éléments essentiels sont en place.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#checklist" class="btn btn-primary">
+                        <i class="fas fa-check-square"></i>
+                        Voir la checklist
+                    </a>
+                    <a href="#validation" class="btn btn-primary">
+                        <i class="fas fa-clipboard-check"></i>
+                        Processus de validation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Checklist Section -->
+        <section id="checklist" class="section">
+            <div class="section-header">
+                <h2 class="section-title">📋 Checklist V1</h2>
+                <p class="section-subtitle">
+                    Utilisez cette checklist pour valider votre V1
+                </p>
+            </div>
+            
+            <div class="checklist-container">
+                <!-- Repos et gouvernance -->
+                <div class="checklist-category">
+                    <div class="category-header">
+                        <i class="fas fa-code-branch"></i>
+                        <h3>Repos et gouvernance</h3>
+                    </div>
+                    <div class="checklist-items">
+                        <div class="checklist-item">
+                            <input type="checkbox" id="repo-links">
+                            <label for="repo-links">Liens vers les repos (front, back) ou monorepo</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="branch-protection">
+                            <label for="branch-protection">Protections de branches actives (CI checks + 1 review requise)</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="pr-references">
+                            <label for="pr-references">PR majeures référencées dans le Google Doc d'équipe</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contrat d'API -->
+                <div class="checklist-category">
+                    <div class="category-header">
+                        <i class="fas fa-file-contract"></i>
+                        <h3>Contrat d'API (REST, contract-first)</h3>
+                    </div>
+                    <div class="checklist-items">
+                        <div class="checklist-item">
+                            <input type="checkbox" id="openapi-spec">
+                            <label for="openapi-spec">Spec OpenAPI 3.1 publiée dans le repo (source-of-truth)</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="swagger-ui">
+                            <label for="swagger-ui">Swagger UI / Redoc / Stoplight accessible</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="postman-collection">
+                            <label for="postman-collection">Postman collection synchronisée avec la spec</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="versioning-policy">
+                            <label for="versioning-policy">Politique de versionnage (breaking changes documentés)</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Implémentation -->
+                <div class="checklist-category">
+                    <div class="category-header">
+                        <i class="fas fa-cogs"></i>
+                        <h3>Implémentation</h3>
+                    </div>
+                    <div class="checklist-items">
+                        <div class="checklist-item">
+                            <input type="checkbox" id="endpoints-conform">
+                            <label for="endpoints-conform">Endpoints principaux conformes à la spec</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="types-generated">
+                            <label for="types-generated">Le front consomme des types générés depuis la spec (ou alternative argumentée)</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="error-handling">
+                            <label for="error-handling">Gestion d'erreurs et statuts cohérente (codes HTTP, message, code interne)</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Qualité -->
+                <div class="checklist-category">
+                    <div class="category-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Qualité</h3>
+                    </div>
+                    <div class="checklist-items">
+                        <div class="checklist-item">
+                            <input type="checkbox" id="ci-github">
+                            <label for="ci-github">CI GitHub Actions: lint, tests, build (checks bloquants sur PR)</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="coverage-50">
+                            <label for="coverage-50">Couverture ≥ 50% (global) + justification du mix (unit/int/e2e)</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="lint-format">
+                            <label for="lint-format">Lint/format appliqués (front et back)</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Déploiement -->
+                <div class="checklist-category">
+                    <div class="category-header">
+                        <i class="fas fa-rocket"></i>
+                        <h3>Déploiement (Vercel exclu)</h3>
+                    </div>
+                    <div class="checklist-items">
+                        <div class="checklist-item">
+                            <input type="checkbox" id="front-url">
+                            <label for="front-url">URL front publique</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="back-url">
+                            <label for="back-url">URL back + base de données (si applicable)</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="version-tag">
+                            <label for="version-tag">Notes de version et tag <code>v1.0.0</code> publiés</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Documentation & présentations -->
+                <div class="checklist-category">
+                    <div class="category-header">
+                        <i class="fas fa-file-alt"></i>
+                        <h3>Documentation & présentations</h3>
+                    </div>
+                    <div class="checklist-items">
+                        <div class="checklist-item">
+                            <input type="checkbox" id="google-doc">
+                            <label for="google-doc">Google Doc: cérémonies, décisions, risques, liens vers PR</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="video-back">
+                            <label for="video-back">Vidéo 10 min équipe back (YouTube non répertorié)</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="video-front">
+                            <label for="video-front">Vidéo 10 min équipe front (YouTube non répertorié)</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Validation Process -->
+        <section id="validation" class="section">
+            <div class="section-header">
+                <h2 class="section-title">✅ Processus de validation</h2>
+                <p class="section-subtitle">
+                    Comment utiliser cette checklist efficacement
+                </p>
+            </div>
+            
+            <div class="validation-steps">
+                <div class="validation-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Préparation</h4>
+                        <p>Avant de commencer, assurez-vous d'avoir accès à tous vos repos et outils de gestion de projet.</p>
+                    </div>
+                </div>
+                
+                <div class="validation-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Vérification technique</h4>
+                        <p>Parcourez chaque catégorie et cochez les éléments validés. Documentez les éléments manquants.</p>
+                    </div>
+                </div>
+                
+                <div class="validation-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Correction</h4>
+                        <p>Adressez les éléments non cochés en priorité selon leur impact sur le projet.</p>
+                    </div>
+                </div>
+                
+                <div class="validation-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Validation finale</h4>
+                        <p>Effectuez une dernière vérification complète avant la soumission.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section id="tips" class="section">
+            <div class="section-header">
+                <h2 class="section-title">💡 Conseils pratiques</h2>
+            </div>
+            
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h4>Planification</h4>
+                    <p>Commencez la checklist dès le début du projet, pas à la fin. Cela vous évitera des surprises.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>Collaboration</h4>
+                    <p>Partagez la checklist avec toute l'équipe pour une validation collective.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-document"></i>
+                    </div>
+                    <h4>Documentation</h4>
+                    <p>Documentez les décisions importantes dans votre Google Doc d'équipe.</p>
+                </div>
+                
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <h4>Tests</h4>
+                    <p>N'attendez pas la fin pour tester. Intégrez les tests dès le début du développement.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources" class="section">
+            <div class="section-header">
+                <h2 class="section-title">🔗 Ressources complémentaires</h2>
+            </div>
+            
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h4>Guide API First</h4>
+                    <p>Apprenez à concevoir vos APIs avant de coder</p>
+                    <a href="api-first.html" class="resource-link">
+                        Consulter le guide <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-vial"></i>
+                    </div>
+                    <h4>Tests</h4>
+                    <p>Stratégies de tests unitaires, intégration et e2e</p>
+                    <a href="testing.html" class="resource-link">
+                        Voir les stratégies <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h4>Déploiement</h4>
+                    <p>Options de déploiement et bonnes pratiques</p>
+                    <a href="deployment.html" class="resource-link">
+                        Explorer les options <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="../assets/images/logo.jpeg" alt="YNOV Campus" class="footer-logo-img">
+                        <span class="footer-logo-text">Coordination Front & Back</span>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="../index.html">Accueil</a></li>
+                        <li><a href="../index.html#programme">Programme</a></li>
+                        <li><a href="../index.html#projet">Projet API First</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Ressources</h3>
+                    <ul>
+                        <li><a href="api-first.html">Guide API First</a></li>
+                        <li><a href="gitflow.html">GitFlow & Agile</a></li>
+                        <li><a href="project-management.html">Gestion de Projet</a></li>
+                        <li><a href="deliverables.html">Livrables</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> contact@ynov.com</p>
+                        <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Campus Ynov</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 YNOV Campus. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            hljs.highlightAll();
+            
+            // Save checklist state to localStorage
+            const checkboxes = document.querySelectorAll('.checklist-item input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                // Load saved state
+                const saved = localStorage.getItem(checkbox.id);
+                if (saved === 'true') {
+                    checkbox.checked = true;
+                }
+                
+                // Save state on change
+                checkbox.addEventListener('change', function() {
+                    localStorage.setItem(this.id, this.checked);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

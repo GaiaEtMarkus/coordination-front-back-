@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Déploiement - Coordination Front & Back</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../assets/images/logo.jpeg" alt="YNOV Campus" class="logo-img">
+                <span class="logo-text">Coordination Front & Back</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#programme" class="nav-link">Programme</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#projet" class="nav-link">Projet API First</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        <i class="fas fa-calendar-alt"></i> Ressources
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="api-first.html" class="dropdown-item">Guide API First</a>
+                        <a href="gitflow.html" class="dropdown-item">GitFlow & Agile</a>
+                        <a href="project-management.html" class="dropdown-item">Gestion de Projet</a>
+                        <a href="deliverables.html" class="dropdown-item">Livrables</a>
+                        <a href="testing.html" class="dropdown-item">Tests</a>
+                        <a href="deployment.html" class="dropdown-item active">Déploiement</a>
+                        <a href="github-workflow.html" class="dropdown-item">GitHub Workflow</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Options de déploiement</h1>
+                <h2 class="hero-subtitle">Vercel exclu - Alternatives modernes</h2>
+                <p class="hero-description">
+                    Découvrez les différentes options de déploiement pour votre frontend et backend avec leurs avantages et limites.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#frontend" class="btn btn-primary">
+                        <i class="fas fa-desktop"></i>
+                        Options Frontend
+                    </a>
+                    <a href="#backend" class="btn btn-primary">
+                        <i class="fas fa-server"></i>
+                        Options Backend
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Frontend Section -->
+        <section id="frontend" class="section">
+            <div class="section-header">
+                <h2 class="section-title">🖥️ Front-end (static/SSR)</h2>
+                <p class="section-subtitle">
+                    Options de déploiement pour vos applications frontend
+                </p>
+            </div>
+            
+            <div class="deployment-grid">
+                <div class="deployment-card">
+                    <div class="deployment-header">
+                        <div class="deployment-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="deployment-info">
+                            <h3>Netlify</h3>
+                            <span class="deployment-type">Static/SSR via adapters limités</span>
+                        </div>
+                    </div>
+                    <div class="deployment-content">
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <h4>✅ Avantages</h4>
+                                <ul>
+                                    <li>Simple à utiliser</li>
+                                    <li>Previews PR automatiques</li>
+                                    <li>CDN global</li>
+                                    <li>Formulaires intégrés</li>
+                                </ul>
+                            </div>
+                            <div class="cons">
+                                <h4>❌ Inconvénients</h4>
+                                <ul>
+                                    <li>SSR limité selon framework</li>
+                                    <li>Fonctions serverless limitées</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="use-case">
+                            <strong>Cas d'usage :</strong> Sites statiques, blogs, portfolios, applications React/Vue statiques
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="deployment-card">
+                    <div class="deployment-header">
+                        <div class="deployment-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="deployment-info">
+                            <h3>GitHub Pages</h3>
+                            <span class="deployment-type">Static uniquement</span>
+                        </div>
+                    </div>
+                    <div class="deployment-content">
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <h4>✅ Avantages</h4>
+                                <ul>
+                                    <li>Très simple pour sites statiques/docs</li>
+                                    <li>Gratuit</li>
+                                    <li>Intégration GitHub native</li>
+                                </ul>
+                            </div>
+                            <div class="cons">
+                                <h4>❌ Inconvénients</h4>
+                                <ul>
+                                    <li>Pas de SSR natif</li>
+                                    <li>Pas de fonctions serverless</li>
+                                    <li>Limitations de build</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="use-case">
+                            <strong>Cas d'usage :</strong> Documentation, portfolios simples, sites statiques
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="deployment-card">
+                    <div class="deployment-header">
+                        <div class="deployment-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <div class="deployment-info">
+                            <h3>Cloudflare Pages</h3>
+                            <span class="deployment-type">Static/SSR Workers</span>
+                        </div>
+                    </div>
+                    <div class="deployment-content">
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <h4>✅ Avantages</h4>
+                                <ul>
+                                    <li>Edge computing</li>
+                                    <li>SSR Workers</li>
+                                    <li>Cache intelligent</li>
+                                    <li>Performance excellente</li>
+                                </ul>
+                            </div>
+                            <div class="cons">
+                                <h4>❌ Inconvénients</h4>
+                                <ul>
+                                    <li>Modèle Workers à appréhender</li>
+                                    <li>Courbe d'apprentissage</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="use-case">
+                            <strong>Cas d'usage :</strong> Applications performantes, SSR moderne, edge computing
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Backend Section -->
+        <section id="backend" class="section">
+            <div class="section-header">
+                <h2 class="section-title">⚙️ Back-end (API) et DB</h2>
+                <p class="section-subtitle">
+                    Options de déploiement pour vos APIs et bases de données
+                </p>
+            </div>
+            
+            <div class="deployment-grid">
+                <div class="deployment-card">
+                    <div class="deployment-header">
+                        <div class="deployment-icon">
+                            <i class="fas fa-train"></i>
+                        </div>
+                        <div class="deployment-info">
+                            <h3>Render / Railway</h3>
+                            <span class="deployment-type">PaaS moderne</span>
+                        </div>
+                    </div>
+                    <div class="deployment-content">
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <h4>✅ Avantages</h4>
+                                <ul>
+                                    <li>Déploiement rapide</li>
+                                    <li>Logs accessibles</li>
+                                    <li>DB managée</li>
+                                    <li>Interface simple</li>
+                                </ul>
+                            </div>
+                            <div class="cons">
+                                <h4>❌ Inconvénients</h4>
+                                <ul>
+                                    <li>Ressources gratuites limitées</li>
+                                    <li>Cold starts possibles</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="use-case">
+                            <strong>Cas d'usage :</strong> APIs Node.js, Python, prototypes rapides
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="deployment-card">
+                    <div class="deployment-header">
+                        <div class="deployment-icon">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <div class="deployment-info">
+                            <h3>Fly.io</h3>
+                            <span class="deployment-type">Edge computing</span>
+                        </div>
+                    </div>
+                    <div class="deployment-content">
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <h4>✅ Avantages</h4>
+                                <ul>
+                                    <li>Déploiement proche utilisateur</li>
+                                    <li>Docker natif</li>
+                                    <li>Performance excellente</li>
+                                    <li>Global edge</li>
+                                </ul>
+                            </div>
+                            <div class="cons">
+                                <h4>❌ Inconvénients</h4>
+                                <ul>
+                                    <li>Courbe d'apprentissage</li>
+                                    <li>Configuration avancée</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="use-case">
+                            <strong>Cas d'usage :</strong> Applications globales, APIs haute performance
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="deployment-card">
+                    <div class="deployment-header">
+                        <div class="deployment-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <div class="deployment-info">
+                            <h3>Heroku</h3>
+                            <span class="deployment-type">PaaS classique</span>
+                        </div>
+                    </div>
+                    <div class="deployment-content">
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <h4>✅ Avantages</h4>
+                                <ul>
+                                    <li>Simplicité</li>
+                                    <li>Add-ons DB</li>
+                                    <li>Écosystème mature</li>
+                                </ul>
+                            </div>
+                            <div class="cons">
+                                <h4>❌ Inconvénients</h4>
+                                <ul>
+                                    <li>Coûts élevés</li>
+                                    <li>Plans évolutifs</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="use-case">
+                            <strong>Cas d'usage :</strong> Applications avec budget, prototypes rapides
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="deployment-card">
+                    <div class="deployment-header">
+                        <div class="deployment-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="deployment-info">
+                            <h3>VPS (OVH/Scaleway/Hetzner)</h3>
+                            <span class="deployment-type">VPS + Docker Compose</span>
+                        </div>
+                    </div>
+                    <div class="deployment-content">
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <h4>✅ Avantages</h4>
+                                <ul>
+                                    <li>Contrôle total</li>
+                                    <li>PHP/Node/Java/Python au choix</li>
+                                    <li>Coût prévisible</li>
+                                    <li>Flexibilité maximale</li>
+                                </ul>
+                            </div>
+                            <div class="cons">
+                                <h4>❌ Inconvénients</h4>
+                                <ul>
+                                    <li>Maintenance requise</li>
+                                    <li>Sécurité à gérer</li>
+                                    <li>Configuration manuelle</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="use-case">
+                            <strong>Cas d'usage :</strong> Applications complexes, contrôle total, apprentissage DevOps
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHP Section -->
+        <section id="php" class="section">
+            <div class="section-header">
+                <h2 class="section-title">🐘 PHP (Laravel/Symfony)</h2>
+                <p class="section-subtitle">
+                    Options spécialisées pour les applications PHP
+                </p>
+            </div>
+            
+            <div class="php-options">
+                <div class="php-card">
+                    <div class="php-header">
+                        <i class="fas fa-cloud"></i>
+                        <h3>PaaS compatibles PHP</h3>
+                        <span class="php-subtitle">Render, Railway, Clever Cloud</span>
+                    </div>
+                    <div class="php-content">
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <h4>✅ Avantages</h4>
+                                <ul>
+                                    <li>Buildpacks PHP</li>
+                                    <li>Déploiement simplifié</li>
+                                    <li>Gestion automatique</li>
+                                </ul>
+                            </div>
+                            <div class="cons">
+                                <h4>❌ Inconvénients</h4>
+                                <ul>
+                                    <li>Coûts/limitations selon plan</li>
+                                    <li>Moins de contrôle</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="php-card">
+                    <div class="php-header">
+                        <i class="fas fa-server"></i>
+                        <h3>VPS + Nginx/Apache + PHP-FPM</h3>
+                        <span class="php-subtitle">Contrôle total</span>
+                    </div>
+                    <div class="php-content">
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <h4>✅ Avantages</h4>
+                                <ul>
+                                    <li>Souplesse totale</li>
+                                    <li>SSR Blade/Twig</li>
+                                    <li>Performance optimisée</li>
+                                </ul>
+                            </div>
+                            <div class="cons">
+                                <h4>❌ Inconvénients</h4>
+                                <ul>
+                                    <li>Administration et CI à soigner</li>
+                                    <li>Maintenance requise</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Best Practices -->
+        <section id="best-practices" class="section">
+            <div class="section-header">
+                <h2 class="section-title">⭐ Bonnes pratiques</h2>
+            </div>
+            
+            <div class="practices-grid">
+                <div class="practice-card">
+                    <div class="practice-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h4>Séparer environnements</h4>
+                    <p>Dev/staging/prod avec configurations distinctes</p>
+                </div>
+                
+                <div class="practice-card">
+                    <div class="practice-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h4>Variables d'environnement</h4>
+                    <p>Secrets gérés via la plateforme, jamais en dur</p>
+                </div>
+                
+                <div class="practice-card">
+                    <div class="practice-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h4>Health checks</h4>
+                    <p>Endpoints de santé et logs accessibles</p>
+                </div>
+                
+                <div class="practice-card">
+                    <div class="practice-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h4>Backups DB</h4>
+                    <p>Backups programmés et testés régulièrement</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Docker Example -->
+        <section id="docker-example" class="section">
+            <div class="section-header">
+                <h2 class="section-title">🐳 Exemple: Dockerfile (Node API minimal)</h2>
+            </div>
+            
+            <div class="code-example">
+                <pre><code class="dockerfile">FROM node:lts-alpine AS deps
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --only=production
+
+FROM node:lts-alpine
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
+EXPOSE 3000
+CMD ["node", "dist/server.js"]</code></pre>
+            </div>
+            
+            <div class="docker-tips">
+                <h3>💡 Conseils Docker</h3>
+                <ul>
+                    <li>Utilisez des images Alpine pour réduire la taille</li>
+                    <li>Séparez les étapes de build et de runtime</li>
+                    <li>Cachez les dépendances avec des layers séparés</li>
+                    <li>Exposez uniquement les ports nécessaires</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Decision Matrix -->
+        <section id="decision-matrix" class="section">
+            <div class="section-header">
+                <h2 class="section-title">🎯 Matrice de décision</h2>
+                <p class="section-subtitle">
+                    Comment choisir la bonne option selon vos besoins
+                </p>
+            </div>
+            
+            <div class="matrix-table">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Critère</th>
+                            <th>Netlify</th>
+                            <th>GitHub Pages</th>
+                            <th>Cloudflare</th>
+                            <th>Render/Railway</th>
+                            <th>Fly.io</th>
+                            <th>VPS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Simplicité</strong></td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐</td>
+                            <td>⭐⭐</td>
+                            <td>⭐</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Performance</strong></td>
+                            <td>⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Coût</strong></td>
+                            <td>⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Contrôle</strong></td>
+                            <td>⭐⭐</td>
+                            <td>⭐</td>
+                            <td>⭐⭐⭐</td>
+                            <td>⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="../assets/images/logo.jpeg" alt="YNOV Campus" class="footer-logo-img">
+                        <span class="footer-logo-text">Coordination Front & Back</span>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="../index.html">Accueil</a></li>
+                        <li><a href="../index.html#programme">Programme</a></li>
+                        <li><a href="../index.html#projet">Projet API First</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Ressources</h3>
+                    <ul>
+                        <li><a href="api-first.html">Guide API First</a></li>
+                        <li><a href="gitflow.html">GitFlow & Agile</a></li>
+                        <li><a href="project-management.html">Gestion de Projet</a></li>
+                        <li><a href="deliverables.html">Livrables</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> contact@ynov.com</p>
+                        <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Campus Ynov</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 YNOV Campus. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            hljs.highlightAll();
+        });
+    </script>
+</body>
+</html>

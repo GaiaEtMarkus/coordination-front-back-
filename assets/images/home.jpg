@@ -1,0 +1,57 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0b6f63;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#59afa0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  
+  <!-- Code elements -->
+  <g opacity="0.3">
+    <rect x="100" y="100" width="200" height="120" rx="8" fill="white" opacity="0.1"/>
+    <rect x="120" y="130" width="160" height="8" rx="4" fill="white" opacity="0.3"/>
+    <rect x="120" y="150" width="120" height="8" rx="4" fill="white" opacity="0.3"/>
+    <rect x="120" y="170" width="140" height="8" rx="4" fill="white" opacity="0.3"/>
+    
+    <rect x="400" y="200" width="180" height="100" rx="8" fill="white" opacity="0.1"/>
+    <rect x="420" y="230" width="140" height="8" rx="4" fill="white" opacity="0.3"/>
+    <rect x="420" y="250" width="100" height="8" rx="4" fill="white" opacity="0.3"/>
+    
+    <rect x="700" y="150" width="160" height="80" rx="8" fill="white" opacity="0.1"/>
+    <rect x="720" y="180" width="120" height="8" rx="4" fill="white" opacity="0.3"/>
+    <rect x="720" y="200" width="100" height="8" rx="4" fill="white" opacity="0.3"/>
+  </g>
+  
+  <!-- Network elements -->
+  <g opacity="0.4">
+    <circle cx="200" cy="300" r="4" fill="white"/>
+    <circle cx="400" cy="250" r="4" fill="white"/>
+    <circle cx="600" cy="300" r="4" fill="white"/>
+    <circle cx="800" cy="280" r="4" fill="white"/>
+    <circle cx="1000" cy="320" r="4" fill="white"/>
+    
+    <line x1="200" y1="300" x2="400" y2="250" stroke="white" stroke-width="2" opacity="0.3"/>
+    <line x1="400" y1="250" x2="600" y2="300" stroke="white" stroke-width="2" opacity="0.3"/>
+    <line x1="600" y1="300" x2="800" y2="280" stroke="white" stroke-width="2" opacity="0.3"/>
+    <line x1="800" y1="280" x2="1000" y2="320" stroke="white" stroke-width="2" opacity="0.3"/>
+  </g>
+  
+  <!-- API symbols -->
+  <g opacity="0.5">
+    <rect x="150" y="400" width="60" height="40" rx="4" fill="white" opacity="0.2"/>
+    <text x="180" y="425" text-anchor="middle" fill="white" font-family="Arial" font-size="12">API</text>
+    
+    <rect x="300" y="380" width="60" height="40" rx="4" fill="white" opacity="0.2"/>
+    <text x="330" y="405" text-anchor="middle" fill="white" font-family="Arial" font-size="12">REST</text>
+    
+    <rect x="450" y="420" width="60" height="40" rx="4" fill="white" opacity="0.2"/>
+    <text x="480" y="445" text-anchor="middle" fill="white" font-family="Arial" font-size="12">JSON</text>
+    
+    <rect x="600" y="390" width="60" height="40" rx="4" fill="white" opacity="0.2"/>
+    <text x="630" y="415" text-anchor="middle" fill="white" font-family="Arial" font-size="12">HTTP</text>
+    
+    <rect x="750" y="410" width="60" height="40" rx="4" fill="white" opacity="0.2"/>
+    <text x="780" y="435" text-anchor="middle" fill="white" font-family="Arial" font-size="12">OpenAPI</text>
+  </g>
+</svg>

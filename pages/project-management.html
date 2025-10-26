@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Projet - Coordination Front & Back</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../assets/images/logo.jpeg" alt="YNOV Campus" class="logo-img">
+                <span class="logo-text">Coordination Front & Back</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#programme" class="nav-link">Programme</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#projet" class="nav-link">Projet API First</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        <i class="fas fa-calendar-alt"></i> Ressources
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="api-first.html" class="dropdown-item">Guide API First</a>
+                        <a href="gitflow.html" class="dropdown-item">GitFlow & Agile</a>
+                        <a href="project-management.html" class="dropdown-item active">Gestion de Projet</a>
+                        <a href="deliverables.html" class="dropdown-item">Livrables</a>
+                        <a href="testing.html" class="dropdown-item">Tests</a>
+                        <a href="deployment.html" class="dropdown-item">Déploiement</a>
+                        <a href="github-workflow.html" class="dropdown-item">GitHub Workflow</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Gestion de Projet</h1>
+                <h2 class="hero-subtitle">Outils et méthodes pour organiser vos projets</h2>
+                <p class="hero-description">
+                    Maîtrisez Jira et les outils de gestion de projet pour organiser efficacement vos backlogs et suivre vos tâches.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#jira" class="btn btn-primary">
+                        <i class="fas fa-tasks"></i>
+                        Découvrir Jira
+                    </a>
+                    <a href="#workflow" class="btn btn-primary">
+                        <i class="fas fa-project-diagram"></i>
+                        Workflow complet
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Jira Section -->
+        <section id="jira" class="section">
+            <div class="section-header">
+                <h2 class="section-title">📋 Jira - Gestion de projet Agile</h2>
+                <p class="section-subtitle">
+                    L'outil de référence pour la gestion de projets et le suivi des tâches en mode Agile.
+                </p>
+            </div>
+            
+            <div class="objective-box">
+                <p>
+                    Je vous conseille vivement de vous faire un Jira pour vos backlogs (ou un outil équivalent bien sûr) 
+                    pour organiser efficacement vos projets et suivre votre progression.
+                </p>
+            </div>
+
+            <div class="content-card">
+                <h3>🎯 Pourquoi utiliser Jira ?</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <i class="fas fa-list"></i>
+                        <h4>Gestion des backlogs</h4>
+                        <p>Organisez vos user stories, epics et tâches de manière structurée</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Suivi de progression</h4>
+                        <p>Visualisez l'avancement avec des tableaux Kanban et des burndown charts</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-users"></i>
+                        <h4>Collaboration d'équipe</h4>
+                        <p>Assignez des tâches, commentez et collaborez en temps réel</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-cogs"></i>
+                        <h4>Workflows personnalisés</h4>
+                        <p>Adaptez les processus à votre méthodologie (Scrum, Kanban, etc.)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3>🏗️ Structure recommandée pour votre projet</h3>
+                <div class="structure-grid">
+                    <div class="structure-item">
+                        <div class="structure-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h4>Epic</h4>
+                        <p>Grandes fonctionnalités (ex: "Authentification utilisateur")</p>
+                        <div class="structure-example">
+                            <strong>Exemple :</strong> Gestion des utilisateurs
+                        </div>
+                    </div>
+                    
+                    <div class="structure-item">
+                        <div class="structure-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h4>User Story</h4>
+                        <p>Fonctionnalité du point de vue utilisateur</p>
+                        <div class="structure-example">
+                            <strong>Exemple :</strong> En tant qu'utilisateur, je veux me connecter avec mon email
+                        </div>
+                    </div>
+                    
+                    <div class="structure-item">
+                        <div class="structure-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <h4>Task</h4>
+                        <p>Tâches techniques concrètes</p>
+                        <div class="structure-example">
+                            <strong>Exemple :</strong> Créer l'endpoint POST /auth/login
+                        </div>
+                    </div>
+                    
+                    <div class="structure-item">
+                        <div class="structure-icon">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                        <h4>Bug</h4>
+                        <p>Problèmes à corriger</p>
+                        <div class="structure-example">
+                            <strong>Exemple :</strong> Erreur 500 sur l'endpoint /users
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3>⚙️ Configuration recommandée</h3>
+                <div class="config-steps">
+                    <div class="config-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Créer le projet</h4>
+                            <p>Choisissez le template "Scrum" ou "Kanban" selon votre préférence</p>
+                        </div>
+                    </div>
+                    
+                    <div class="config-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Configurer les composants</h4>
+                            <p>Créez des composants pour organiser : Frontend, Backend, API, Tests, DevOps</p>
+                        </div>
+                    </div>
+                    
+                    <div class="config-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Définir les labels</h4>
+                            <p>Ajoutez des labels : priority-high, priority-medium, priority-low, frontend, backend</p>
+                        </div>
+                    </div>
+                    
+                    <div class="config-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Configurer les sprints</h4>
+                            <p>Définissez la durée des sprints (1-2 semaines recommandées pour votre projet)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Workflow Section -->
+        <section id="workflow" class="section">
+            <div class="section-header">
+                <h2 class="section-title">🔄 Workflow de développement complet</h2>
+                <p class="section-subtitle">
+                    Les étapes à suivre avant de commencer à coder pour une base solide.
+                </p>
+            </div>
+            
+            <div class="content-card">
+                <h3>📋 Étapes à suivre avant de commencer à coder</h3>
+                <div class="workflow-steps">
+                    <div class="workflow-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Créez vos dépôts Git</h4>
+                            <ul>
+                                <li>Un dépôt pour le front-end et un pour le back-end</li>
+                                <li>Ou un monorepo si votre équipe le décide</li>
+                                <li>Invitez tous les membres de l'équipe</li>
+                                <li>Activez la protection de la branche principale (main/master)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="workflow-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Initialisez la structure</h4>
+                            <ul>
+                                <li>Poussez une première version du projet avec uniquement la structure minimale</li>
+                                <li>Un dossier source, un README, un fichier d'ignore</li>
+                                <li>Un fichier de configuration des dépendances</li>
+                                <li>Le but est d'avoir une base propre et commune</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="workflow-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Mettez en place le CI/CD</h4>
+                            <ul>
+                                <li>Configurez une intégration continue avec GitHub Actions ou GitLab CI</li>
+                                <li>Le pipeline doit exécuter automatiquement :</li>
+                                <li>Installation des dépendances</li>
+                                <li>Lint / tests</li>
+                                <li>Build du projet</li>
+                                <li>Si une étape échoue, la PR ne doit pas pouvoir être fusionnée</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="workflow-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Vérifiez votre pipeline</h4>
+                            <ul>
+                                <li>Poussez une modification test</li>
+                                <li>Vérifiez que la CI s'exécute correctement</li>
+                                <li>Tout doit passer au vert avant de continuer</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="workflow-step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>Validez avant de coder</h4>
+                            <ul>
+                                <li>Une fois la CI opérationnelle, vous pouvez commencer à développer</li>
+                                <li>L'objectif est d'avoir une base stable, propre, et automatisée dès le départ</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contract First Section -->
+        <section id="contract-first" class="section">
+            <div class="section-header">
+                <h2 class="section-title">📄 Contract-First API Development</h2>
+                <p class="section-subtitle">
+                    Flow de développement API Contract-first pour une coordination optimale.
+                </p>
+            </div>
+            
+            <div class="content-card">
+                <h3>🔄 Flow de développement API Contract-first</h3>
+                <p>
+                    À l'ère du web, nous sommes de plus en plus amenés à développer des API Rest. 
+                    Lorsqu'il s'agit de développer une API Rest, deux flows de développement s'offrent à nous :
+                </p>
+                
+                <div class="flow-comparison">
+                    <div class="flow-card">
+                        <div class="flow-header">
+                            <i class="fas fa-code"></i>
+                            <h4>Code-First</h4>
+                        </div>
+                        <div class="flow-content">
+                            <p>Commencer la spécification de l'API par le code</p>
+                            <ul>
+                                <li>Développement rapide</li>
+                                <li>Moins de documentation</li>
+                                <li>Risque de divergence</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="flow-card recommended">
+                        <div class="flow-header">
+                            <i class="fas fa-file-contract"></i>
+                            <h4>Contract-First</h4>
+                            <span class="recommended-badge">Recommandé</span>
+                        </div>
+                        <div class="flow-content">
+                            <p>Partir plutôt du contrat d'API</p>
+                            <ul>
+                                <li>Documentation automatique</li>
+                                <li>Coordination équipes</li>
+                                <li>Tests de contrats</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3>📚 Ressources supplémentaires</h3>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                        <h4>Flow Contract-First</h4>
+                        <p>Article détaillé sur le développement API Contract-first</p>
+                        <a href="https://blog.yousign.io/posts/contract-first-api-development-flow" target="_blank" class="resource-link">
+                            Lire l'article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <h4>Guide OpenAPI</h4>
+                        <p>Recette complète pour l'utilisation d'OpenAPI</p>
+                        <a href="https://gaiaetmarkus.github.io/coordination-front-back-/ressources/openApi.pdf" target="_blank" class="resource-link">
+                            Télécharger le PDF <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <h4>Jira Atlassian</h4>
+                        <p>Outil de gestion de projet et suivi des tâches</p>
+                        <a href="https://www.atlassian.com/software/jira" target="_blank" class="resource-link">
+                            Découvrir Jira <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Outils alternatifs -->
+        <section id="alternatives" class="section">
+            <div class="section-header">
+                <h2 class="section-title">🛠️ Alternatives à Jira</h2>
+                <p class="section-subtitle">
+                    D'autres outils de gestion de projet selon vos besoins et budget.
+                </p>
+            </div>
+            
+            <div class="alternatives-grid">
+                <div class="alternative-card">
+                    <div class="alternative-header">
+                        <i class="fas fa-trello"></i>
+                        <h3>Trello</h3>
+                        <span class="price-tag">Gratuit</span>
+                    </div>
+                    <div class="alternative-content">
+                        <p>Simple et visuel, parfait pour les petites équipes</p>
+                        <ul>
+                            <li>Tableaux Kanban intuitifs</li>
+                            <li>Collaboration en temps réel</li>
+                            <li>Intégrations nombreuses</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="alternative-card">
+                    <div class="alternative-header">
+                        <i class="fas fa-github"></i>
+                        <h3>GitHub Projects</h3>
+                        <span class="price-tag">Inclus</span>
+                    </div>
+                    <div class="alternative-content">
+                        <p>Intégré à GitHub, idéal pour les projets open source</p>
+                        <ul>
+                            <li>Intégration native avec Git</li>
+                            <li>Automatisation avec Actions</li>
+                            <li>Tableaux et roadmaps</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="alternative-card">
+                    <div class="alternative-header">
+                        <i class="fas fa-rocket"></i>
+                        <h3>Linear</h3>
+                        <span class="price-tag">Freemium</span>
+                    </div>
+                    <div class="alternative-content">
+                        <p>Moderne et rapide, conçu pour les développeurs</p>
+                        <ul>
+                            <li>Interface épurée</li>
+                            <li>Raccourcis clavier</li>
+                            <li>Intégrations dev</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="alternative-card">
+                    <div class="alternative-header">
+                        <i class="fas fa-clipboard-list"></i>
+                        <h3>Notion</h3>
+                        <span class="price-tag">Freemium</span>
+                    </div>
+                    <div class="alternative-content">
+                        <p>Polyvalent, combine gestion de projet et documentation</p>
+                        <ul>
+                            <li>Bases de données flexibles</li>
+                            <li>Documentation intégrée</li>
+                            <li>Templates prêts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="../assets/images/logo.jpeg" alt="YNOV Campus" class="footer-logo-img">
+                        <span class="footer-logo-text">Coordination Front & Back</span>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="../index.html">Accueil</a></li>
+                        <li><a href="../index.html#programme">Programme</a></li>
+                        <li><a href="../index.html#projet">Projet API First</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Ressources</h3>
+                    <ul>
+                        <li><a href="api-first.html">Guide API First</a></li>
+                        <li><a href="gitflow.html">GitFlow & Agile</a></li>
+                        <li><a href="project-management.html">Gestion de Projet</a></li>
+                        <li><a href="deliverables.html">Livrables</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> contact@ynov.com</p>
+                        <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Campus Ynov</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 YNOV Campus. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            hljs.highlightAll();
+        });
+    </script>
+</body>
+</html>

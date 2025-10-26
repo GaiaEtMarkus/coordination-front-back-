@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coordination Front & Back - Mastère 2</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/images/logo.jpeg" alt="YNOV Campus" class="logo-img">
+                <span class="logo-text">Coordination Front & Back</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#accueil" class="nav-link">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#programme" class="nav-link">Programme</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projet" class="nav-link">Projet API First</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        <i class="fas fa-calendar-alt"></i> Ressources
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="pages/api-first.html" class="dropdown-item">Guide API First</a>
+                        <a href="pages/gitflow.html" class="dropdown-item">GitFlow & Agile</a>
+                        <a href="pages/project-management.html" class="dropdown-item">Gestion de Projet</a>
+                        <a href="pages/deliverables.html" class="dropdown-item">Livrables</a>
+                        <a href="pages/testing.html" class="dropdown-item">Tests</a>
+                        <a href="pages/deployment.html" class="dropdown-item">Déploiement</a>
+                        <a href="pages/github-workflow.html" class="dropdown-item">GitHub Workflow</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="hero-background">
+            <img src="assets/images/home.jpg" alt="Campus moderne" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Coordination Front & Back</h1>
+                <h2 class="hero-subtitle">Mastère 2 - Formation intensive API First</h2>
+                <p class="hero-description">
+                    Maîtrisez la coordination entre équipes frontend et backend avec l'approche API First. 
+                    Développez des projets collaboratifs avec OpenAPI, tests automatisés et déploiement continu.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Modules</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">40h</span>
+                        <span class="stat-label">Formation</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Pratique</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#programme" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i>
+                        Découvrir le programme
+                    </a>
+                    <a href="pages/api-first.html" class="btn btn-primary">
+                        <i class="fas fa-play"></i>
+                        Commencer API First
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="introduction">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Une formation complète</h2>
+                <p class="section-subtitle">
+                    Maîtrisez les outils et méthodes pour une coordination efficace entre frontend et backend.
+                </p>
+            </div>
+            <div class="intro-grid">
+                <div class="intro-card">
+                    <div class="card-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>API First</h3>
+                    <p>Concevez vos APIs avant de coder avec OpenAPI. Définissez les contrats d'échange pour une collaboration optimale entre équipes.</p>
+                </div>
+                <div class="intro-card">
+                    <div class="card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Collaboration</h3>
+                    <p>Méthodes Agile, Git workflow, code reviews et communication efficace pour des projets front/back réussis.</p>
+                </div>
+                <div class="intro-card">
+                    <div class="card-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Qualité & Tests</h3>
+                    <p>Tests automatisés, CI/CD, monitoring et bonnes pratiques pour des applications robustes en production.</p>
+                </div>
+                <div class="intro-card">
+                    <div class="card-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Déploiement</h3>
+                    <p>Docker, Kubernetes, observabilité et monitoring pour des déploiements fiables et scalables.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programme Section -->
+    <section id="programme" class="programme">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Programme détaillé</h2>
+                <p class="section-subtitle">
+                    5 modules structurés pour maîtriser la coordination Front & Back
+                </p>
+            </div>
+            
+            <!-- Programme Overview -->
+            <div class="programme-overview">
+                <div class="chapitre-card chapitre-1">
+                    <div class="chapitre-header">
+                        <span class="chapitre-number">Module 1</span>
+                        <span class="chapitre-theme">API First</span>
+                    </div>
+                    <h3>Conception API avec OpenAPI</h3>
+                    <p>Définissez vos APIs avant de coder pour une coordination optimale</p>
+                    <ul class="chapitre-features">
+                        <li>Philosophie API First</li>
+                        <li>Spécification OpenAPI</li>
+                        <li>Génération de documentation</li>
+                        <li>Mock servers</li>
+                    </ul>
+                </div>
+                
+                <div class="chapitre-card chapitre-2">
+                    <div class="chapitre-header">
+                        <span class="chapitre-number">Module 2</span>
+                        <span class="chapitre-theme">Collaboration</span>
+                    </div>
+                    <h3>Workflow Git & Communication</h3>
+                    <p>Méthodes et outils pour une collaboration efficace</p>
+                    <ul class="chapitre-features">
+                        <li>Git workflow (GitFlow, GitHub Flow)</li>
+                        <li>Pull requests et code reviews</li>
+                        <li>Communication inter-équipes</li>
+                        <li>Outils de collaboration</li>
+                    </ul>
+                </div>
+                
+                <div class="chapitre-card chapitre-3">
+                    <div class="chapitre-header">
+                        <span class="chapitre-number">Module 3</span>
+                        <span class="chapitre-theme">Tests</span>
+                    </div>
+                    <h3>Tests & Qualité</h3>
+                    <p>Assurez la qualité de vos applications</p>
+                    <ul class="chapitre-features">
+                        <li>Tests unitaires et d'intégration</li>
+                        <li>Tests E2E</li>
+                        <li>Coverage et métriques</li>
+                        <li>Outils de qualité</li>
+                    </ul>
+                </div>
+                
+                <div class="chapitre-card chapitre-4">
+                    <div class="chapitre-header">
+                        <span class="chapitre-number">Module 4</span>
+                        <span class="chapitre-theme">DevOps</span>
+                    </div>
+                    <h3>CI/CD & Déploiement</h3>
+                    <p>Automatisez vos déploiements</p>
+                    <ul class="chapitre-features">
+                        <li>Pipeline CI/CD</li>
+                        <li>Docker et conteneurisation</li>
+                        <li>Environnements multiples</li>
+                        <li>Rollback et monitoring</li>
+                    </ul>
+                </div>
+                
+                <div class="chapitre-card chapitre-5">
+                    <div class="chapitre-header">
+                        <span class="chapitre-number">Module 5</span>
+                        <span class="chapitre-theme">Production</span>
+                    </div>
+                    <h3>Monitoring & Observabilité</h3>
+                    <p>Surveillez vos applications en production</p>
+                    <ul class="chapitre-features">
+                        <li>Logs et métriques</li>
+                        <li>Alerting et dashboards</li>
+                        <li>Performance monitoring</li>
+                        <li>Incident management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projet Section -->
+    <section id="projet" class="projet">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Projet API First</h2>
+                <p class="section-subtitle">
+                    Votre fil rouge : Développez un projet collaboratif avec l'approche API First
+                </p>
+            </div>
+            <div class="projet-content">
+                <div class="projet-description">
+                    <h3>🎯 Objectif du projet</h3>
+                    <p>
+                        Conception et développement d'une application complète en utilisant l'approche API First. 
+                        Vous travaillerez en équipes mixtes (frontend/backend) avec une coordination optimale 
+                        grâce aux outils et méthodes enseignés.
+                    </p>
+                    
+                    <h3>🏗️ Architecture cible</h3>
+                    <div class="architecture-features">
+                        <div class="feature">
+                            <i class="fas fa-server"></i>
+                            <span>API REST avec OpenAPI</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Tests automatisés</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-link"></i>
+                            <span>Frontend moderne</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-rocket"></i>
+                            <span>Déploiement continu</span>
+                        </div>
+                    </div>
+
+                    <h3>📦 Technologies utilisées</h3>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <i class="fas fa-file-code"></i>
+                            <h4>OpenAPI</h4>
+                            <p>Spécification et documentation d'API</p>
+                        </div>
+                        <div class="service-card">
+                            <i class="fas fa-git-alt"></i>
+                            <h4>Git & GitHub</h4>
+                            <p>Workflow collaboratif et CI/CD</p>
+                        </div>
+                        <div class="service-card">
+                            <i class="fas fa-vial"></i>
+                            <h4>Tests</h4>
+                            <p>Jest, Cypress, Postman</p>
+                        </div>
+                        <div class="service-card">
+                            <i class="fas fa-docker"></i>
+                            <h4>Docker</h4>
+                            <p>Conteneurisation et déploiement</p>
+                        </div>
+                    </div>
+                    
+                    <div class="progression-note">
+                        <h4>📋 Progression Guidée</h4>
+                        <p>
+                            Chaque module vous permettra d'implémenter une partie spécifique du projet avec des instructions détaillées. 
+                            Vous maîtriserez progressivement l'API First, les tests, le déploiement et le monitoring.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Évaluation Section -->
+    <section class="technologies">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Évaluation</h2>
+                <p class="section-subtitle">
+                    Système d'évaluation transparent avec focus sur la collaboration
+                </p>
+            </div>
+            <div class="evaluation-content">
+                <div class="evaluation-criteria">
+                    <h3>📊 Critères d'évaluation</h3>
+                    <div class="criteria-grid">
+                        <div class="criteria-item">
+                            <span class="criteria-percentage">30%</span>
+                            <h4>Projet API First</h4>
+                            <p>Qualité de la spécification OpenAPI et implémentation</p>
+                        </div>
+                        <div class="criteria-item">
+                            <span class="criteria-percentage">25%</span>
+                            <h4>Collaboration</h4>
+                            <p>Git workflow, code reviews, communication inter-équipes</p>
+                        </div>
+                        <div class="criteria-item">
+                            <span class="criteria-percentage">20%</span>
+                            <h4>Tests & Qualité</h4>
+                            <p>Coverage, tests automatisés, bonnes pratiques</p>
+                        </div>
+                        <div class="criteria-item">
+                            <span class="criteria-percentage">15%</span>
+                            <h4>Déploiement</h4>
+                            <p>CI/CD, Docker, monitoring en production</p>
+                        </div>
+                        <div class="criteria-item">
+                            <span class="criteria-percentage">10%</span>
+                            <h4>Présentation</h4>
+                            <p>Démo live, documentation, retour d'expérience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ressources Section -->
+    <section id="ressources" class="ressources">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Ressources & Support</h2>
+                <p class="section-subtitle">
+                    Tout ce dont vous avez besoin pour réussir
+                </p>
+            </div>
+            <div class="ressources-grid">
+                <div class="ressource-card">
+                    <div class="ressource-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Documentation</h3>
+                    <ul>
+                        <li>Guide API First complet</li>
+                        <li>Livrables détaillés</li>
+                        <li>Exemples de projets</li>
+                        <li>Bonnes pratiques</li>
+                    </ul>
+                </div>
+                <div class="ressource-card">
+                    <div class="ressource-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Outils</h3>
+                    <ul>
+                        <li>Templates OpenAPI</li>
+                        <li>Configurations CI/CD</li>
+                        <li>Docker compose</li>
+                        <li>Scripts d'automatisation</li>
+                    </ul>
+                </div>
+                <div class="ressource-card">
+                    <div class="ressource-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Support</h3>
+                    <ul>
+                        <li>Discord dédié</li>
+                        <li>Code reviews croisées</li>
+                        <li>Pair programming</li>
+                        <li>Mentoring personnalisé</li>
+                    </ul>
+                </div>
+                <div class="ressource-card">
+                    <div class="ressource-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Formation continue</h3>
+                    <ul>
+                        <li>Livres recommandés</li>
+                        <li>Certifications suggérées</li>
+                        <li>Cours en ligne</li>
+                        <li>Communautés à rejoindre</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="assets/images/logo.jpeg" alt="YNOV Campus" class="footer-logo-img">
+                        <span class="footer-logo-text">Coordination Front & Back</span>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Programme</h3>
+                    <ul>
+                        <li><a href="#programme">Planning détaillé</a></li>
+                        <li><a href="#projet">Projet API First</a></li>
+                        <li><a href="#ressources">Ressources</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Technologies</h3>
+                    <ul>
+                        <li>OpenAPI & Swagger</li>
+                        <li>Git & GitHub</li>
+                        <li>Tests automatisés</li>
+                        <li>Docker & CI/CD</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> contact@ynov.com</p>
+                        <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Campus Ynov</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 YNOV Campus. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

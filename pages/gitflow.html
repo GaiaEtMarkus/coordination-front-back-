@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitFlow & Agile - Coordination Front & Back</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../assets/images/logo.jpeg" alt="YNOV Campus" class="logo-img">
+                <span class="logo-text">Coordination Front & Back</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#programme" class="nav-link">Programme</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#projet" class="nav-link">Projet API First</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        <i class="fas fa-calendar-alt"></i> Ressources
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="api-first.html" class="dropdown-item">Guide API First</a>
+                        <a href="gitflow.html" class="dropdown-item active">GitFlow & Agile</a>
+                        <a href="project-management.html" class="dropdown-item">Gestion de Projet</a>
+                        <a href="deliverables.html" class="dropdown-item">Livrables</a>
+                        <a href="testing.html" class="dropdown-item">Tests</a>
+                        <a href="deployment.html" class="dropdown-item">Déploiement</a>
+                        <a href="github-workflow.html" class="dropdown-item">GitHub Workflow</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">GitFlow & Agile</h1>
+                <h2 class="hero-subtitle">Méthodes de collaboration et organisation</h2>
+                <p class="hero-description">
+                    Maîtrisez GitFlow pour organiser vos branches et adoptez la philosophie Agile pour une collaboration efficace.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#gitflow" class="btn btn-primary">
+                        <i class="fas fa-code-branch"></i>
+                        Découvrir GitFlow
+                    </a>
+                    <a href="#agile" class="btn btn-primary">
+                        <i class="fas fa-users"></i>
+                        Comprendre Agile
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- GitFlow Section -->
+        <section id="gitflow" class="section">
+            <div class="section-header">
+                <h2 class="section-title">🧭 GitFlow - Organisation des branches</h2>
+                <p class="section-subtitle">
+                    Une méthode d'organisation des branches Git qui structure le cycle de vie du code dans une équipe.
+                </p>
+            </div>
+            
+            <div class="objective-box">
+                <p>
+                    GitFlow permet de séparer clairement les environnements (développement, préparation, production) 
+                    et de travailler en parallèle sans se gêner.
+                </p>
+            </div>
+
+            <div class="content-card">
+                <h3>Le principe : chaque type de branche a un rôle bien défini</h3>
+                
+                <div class="branches-grid">
+                    <div class="branch-card main-branch">
+                        <div class="branch-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h4>main</h4>
+                        <p>Contient le code stable et déployé en production</p>
+                        <div class="branch-features">
+                            <span class="feature-tag">Production</span>
+                            <span class="feature-tag">Stable</span>
+                            <span class="feature-tag">Déployé</span>
+                        </div>
+                    </div>
+                    
+                    <div class="branch-card develop-branch">
+                        <div class="branch-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4>develop</h4>
+                        <p>Contient le code en cours de développement (base pour les nouvelles fonctionnalités)</p>
+                        <div class="branch-features">
+                            <span class="feature-tag">Développement</span>
+                            <span class="feature-tag">Intégration</span>
+                            <span class="feature-tag">Base</span>
+                        </div>
+                    </div>
+                    
+                    <div class="branch-card feature-branch">
+                        <div class="branch-icon">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <h4>feature/*</h4>
+                        <p>Sert à développer une fonctionnalité spécifique, puis est fusionnée dans develop</p>
+                        <div class="branch-features">
+                            <span class="feature-tag">Fonctionnalité</span>
+                            <span class="feature-tag">Isolée</span>
+                            <span class="feature-tag">Temporaire</span>
+                        </div>
+                    </div>
+                    
+                    <div class="branch-card release-branch">
+                        <div class="branch-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h4>release/*</h4>
+                        <p>Utilisée pour préparer une nouvelle version (tests, corrections, versioning) avant de la livrer</p>
+                        <div class="branch-features">
+                            <span class="feature-tag">Préparation</span>
+                            <span class="feature-tag">Tests</span>
+                            <span class="feature-tag">Versioning</span>
+                        </div>
+                    </div>
+                    
+                    <div class="branch-card hotfix-branch">
+                        <div class="branch-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <h4>hotfix/*</h4>
+                        <p>Permet de corriger rapidement un bug en production, puis de réintégrer la correction dans main et develop</p>
+                        <div class="branch-features">
+                            <span class="feature-tag">Urgent</span>
+                            <span class="feature-tag">Bug fix</span>
+                            <span class="feature-tag">Production</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Workflow Section -->
+            <div class="content-card">
+                <h3>🔄 Workflow GitFlow</h3>
+                <div class="workflow-steps">
+                    <div class="workflow-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Créer une feature</h4>
+                            <p>Partir de <code>develop</code> et créer <code>feature/nouvelle-fonctionnalite</code></p>
+                        </div>
+                    </div>
+                    
+                    <div class="workflow-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Développer</h4>
+                            <p>Travailler sur la feature, faire des commits réguliers</p>
+                        </div>
+                    </div>
+                    
+                    <div class="workflow-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Fusionner</h4>
+                            <p>Créer une Pull Request vers <code>develop</code></p>
+                        </div>
+                    </div>
+                    
+                    <div class="workflow-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Release</h4>
+                            <p>Créer <code>release/v1.0.0</code> depuis <code>develop</code></p>
+                        </div>
+                    </div>
+                    
+                    <div class="workflow-step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>Production</h4>
+                            <p>Fusionner vers <code>main</code> et tagger la version</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Commandes GitFlow -->
+            <div class="content-card">
+                <h3>⚡ Commandes GitFlow essentielles</h3>
+                <div class="commands-grid">
+                    <div class="command-card">
+                        <h4>Initialiser GitFlow</h4>
+                        <code>git flow init</code>
+                    </div>
+                    <div class="command-card">
+                        <h4>Démarrer une feature</h4>
+                        <code>git flow feature start ma-feature</code>
+                    </div>
+                    <div class="command-card">
+                        <h4>Finir une feature</h4>
+                        <code>git flow feature finish ma-feature</code>
+                    </div>
+                    <div class="command-card">
+                        <h4>Démarrer une release</h4>
+                        <code>git flow release start 1.0.0</code>
+                    </div>
+                    <div class="command-card">
+                        <h4>Finir une release</h4>
+                        <code>git flow release finish 1.0.0</code>
+                    </div>
+                    <div class="command-card">
+                        <h4>Hotfix urgent</h4>
+                        <code>git flow hotfix start bug-fix</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Agile Section -->
+        <section id="agile" class="section">
+            <div class="section-header">
+                <h2 class="section-title">🌱 La philosophie Agile</h2>
+                <p class="section-subtitle">
+                    Agile, c'est avant tout une manière de penser, pas une méthode rigide.
+                </p>
+            </div>
+            
+            <div class="quote-box">
+                <p>On avance par étapes courtes, on livre souvent, et on s'adapte en permanence.</p>
+            </div>
+
+            <div class="content-card">
+                <h3>Les principes clés</h3>
+                <div class="principles-grid">
+                    <div class="principle-card">
+                        <div class="principle-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h4>L'humain avant le processus</h4>
+                        <p>Les individus et leurs interactions sont plus importants que les processus et les outils</p>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h4>Un produit qui fonctionne</h4>
+                        <p>Un logiciel qui fonctionne est plus important qu'une documentation exhaustive</p>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4>La collaboration</h4>
+                        <p>La collaboration avec le client est plus importante que la négociation de contrat</p>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-icon">
+                            <i class="fas fa-sync"></i>
+                        </div>
+                        <h4>L'adaptation</h4>
+                        <p>Répondre au changement est plus important que suivre un plan</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3>En pratique</h3>
+                <div class="practices-list">
+                    <div class="practice-item">
+                        <i class="fas fa-cut"></i>
+                        <div class="practice-content">
+                            <h4>Découpe ton travail</h4>
+                            <p>En petites parties livrables et testables</p>
+                        </div>
+                    </div>
+                    
+                    <div class="practice-item">
+                        <i class="fas fa-sync-alt"></i>
+                        <div class="practice-content">
+                            <h4>Teste, ajuste, améliore</h4>
+                            <p>En continu pour valider les hypothèses</p>
+                        </div>
+                    </div>
+                    
+                    <div class="practice-item">
+                        <i class="fas fa-users"></i>
+                        <div class="practice-content">
+                            <h4>Travaille en équipe</h4>
+                            <p>Communique régulièrement et efficacement</p>
+                        </div>
+                    </div>
+                    
+                    <div class="practice-item">
+                        <i class="fas fa-random"></i>
+                        <div class="practice-content">
+                            <h4>Accepte le changement</h4>
+                            <p>C'est une force, pas une faiblesse</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="summary-box">
+                <h2>💡 Agile en résumé</h2>
+                <p><strong>Agile, c'est progresser vite, ensemble, et toujours prêt à s'adapter.</strong></p>
+                <p>Cette approche permet de :</p>
+                <ul>
+                    <li>Livrer de la valeur rapidement</li>
+                    <li>Répondre aux changements de besoins</li>
+                    <li>Améliorer la qualité du produit</li>
+                    <li>Renforcer la collaboration d'équipe</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Méthodologies Section -->
+        <section id="methodologies" class="section">
+            <div class="section-header">
+                <h2 class="section-title">🛠️ Méthodologies Agile populaires</h2>
+            </div>
+            
+            <div class="methodologies-grid">
+                <div class="methodology-card">
+                    <div class="methodology-header">
+                        <i class="fas fa-sprint"></i>
+                        <h3>Scrum</h3>
+                    </div>
+                    <div class="methodology-content">
+                        <p>Framework basé sur des sprints courts (1-4 semaines) avec des rôles définis.</p>
+                        <ul>
+                            <li>Product Owner</li>
+                            <li>Scrum Master</li>
+                            <li>Équipe de développement</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="methodology-card">
+                    <div class="methodology-header">
+                        <i class="fas fa-tasks"></i>
+                        <h3>Kanban</h3>
+                    </div>
+                    <div class="methodology-content">
+                        <p>Visualisation du flux de travail avec des colonnes (À faire, En cours, Terminé).</p>
+                        <ul>
+                            <li>Limitation du travail en cours</li>
+                            <li>Amélioration continue</li>
+                            <li>Flexibilité maximale</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="methodology-card">
+                    <div class="methodology-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Extreme Programming (XP)</h3>
+                    </div>
+                    <div class="methodology-content">
+                        <p>Focus sur les pratiques techniques et la qualité du code.</p>
+                        <ul>
+                            <li>Pair programming</li>
+                            <li>Test-driven development</li>
+                            <li>Refactoring continu</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="../assets/images/logo.jpeg" alt="YNOV Campus" class="footer-logo-img">
+                        <span class="footer-logo-text">Coordination Front & Back</span>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="../index.html">Accueil</a></li>
+                        <li><a href="../index.html#programme">Programme</a></li>
+                        <li><a href="../index.html#projet">Projet API First</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Ressources</h3>
+                    <ul>
+                        <li><a href="api-first.html">Guide API First</a></li>
+                        <li><a href="gitflow.html">GitFlow & Agile</a></li>
+                        <li><a href="project-management.html">Gestion de Projet</a></li>
+                        <li><a href="deliverables.html">Livrables</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> contact@ynov.com</p>
+                        <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Campus Ynov</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 YNOV Campus. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            hljs.highlightAll();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide API First - Coordination Front & Back</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../assets/images/logo.jpeg" alt="YNOV Campus" class="logo-img">
+                <span class="logo-text">Coordination Front & Back</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#programme" class="nav-link">Programme</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#projet" class="nav-link">Projet API First</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        <i class="fas fa-calendar-alt"></i> Ressources
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="api-first.html" class="dropdown-item active">Guide API First</a>
+                        <a href="gitflow.html" class="dropdown-item">GitFlow & Agile</a>
+                        <a href="project-management.html" class="dropdown-item">Gestion de Projet</a>
+                        <a href="deliverables.html" class="dropdown-item">Livrables</a>
+                        <a href="testing.html" class="dropdown-item">Tests</a>
+                        <a href="deployment.html" class="dropdown-item">Déploiement</a>
+                        <a href="github-workflow.html" class="dropdown-item">GitHub Workflow</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Guide API First</h1>
+                <h2 class="hero-subtitle">Concevez vos APIs avant de coder</h2>
+                <p class="hero-description">
+                    Maîtrisez l'approche API First avec OpenAPI pour une coordination optimale entre équipes frontend et backend.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#objectif" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i>
+                        Découvrir l'approche
+                    </a>
+                    <a href="#etapes" class="btn btn-primary">
+                        <i class="fas fa-play"></i>
+                        Commencer les étapes
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Objectif Section -->
+        <section id="objectif" class="section">
+            <div class="section-header">
+                <h2 class="section-title">🎯 Objectif</h2>
+                <p class="section-subtitle">
+                    Avant d'écrire une seule ligne de code backend, vous allez concevoir et documenter votre API à l'aide d'OpenAPI.
+                </p>
+            </div>
+            
+            <div class="objective-box">
+                <p>
+                    L'approche API First consiste à définir le contrat d'échange entre le front et le back avant toute implémentation, 
+                    pour garantir une bonne coordination.
+                </p>
+            </div>
+        </section>
+
+        <!-- Philosophie Section -->
+        <section id="philosophie" class="section">
+            <div class="section-header">
+                <h2 class="section-title">🧩 Comprendre la philosophie API First</h2>
+            </div>
+            
+            <div class="quote-box">
+                <p>"On commence par définir ce que l'API doit faire avant de coder comment elle le fait."</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Validation des besoins</h3>
+                    <p>Validez les besoins fonctionnels avant le développement</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Travail en parallèle</h3>
+                    <p>Le front peut commencer dès que la spec est prête</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-book"></i>
+                    <h3>Source de vérité</h3>
+                    <p>Une spec OpenAPI unique et fiable</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Intégration sécurisée</h3>
+                    <p>Évitez les mauvaises surprises d'intégration</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- OpenAPI Section -->
+        <section id="openapi" class="section">
+            <div class="section-header">
+                <h2 class="section-title">🧠 Qu'est-ce qu'OpenAPI ?</h2>
+            </div>
+            
+            <div class="content-card">
+                <p>
+                    OpenAPI (anciennement Swagger) est un standard de description d'API REST. 
+                    C'est un fichier <code>.yaml</code> ou <code>.json</code> qui décrit :
+                </p>
+                
+                <ul class="feature-list">
+                    <li>Les endpoints disponibles (<code>/users</code>, <code>/login</code>, <code>/products</code>…)</li>
+                    <li>Les méthodes HTTP utilisées (GET, POST, PUT, DELETE…)</li>
+                    <li>Les paramètres et corps de requêtes</li>
+                    <li>Les réponses attendues</li>
+                    <li>Et les types de données échangés</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <h3>Ce fichier devient :</h3>
+                    <ul>
+                        <li>Une documentation vivante</li>
+                        <li>Une base de génération automatique (types, clients, mocks, etc.)</li>
+                        <li>Et un contrat officiel entre front et back</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Étapes Section -->
+        <section id="etapes" class="section">
+            <div class="section-header">
+                <h2 class="section-title">🧰 Étapes pour travailler en API First</h2>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Créer la spec OpenAPI</h3>
+                        <ul>
+                            <li>Créez un fichier <code>openapi.yaml</code> à la racine du repo backend</li>
+                            <li>Décrivez vos routes principales : endpoints, entrées, sorties, statuts HTTP</li>
+                            <li>Utilisez des outils graphiques comme :</li>
+                        </ul>
+                        <div class="tools-list">
+                            <span class="tool-tag">Stoplight Studio</span>
+                            <span class="tool-tag">Swagger Editor</span>
+                            <span class="tool-tag">Insomnia Designer</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Publier la spec</h3>
+                        <ul>
+                            <li>Rendez-la accessible dans votre repo (ex: <code>/docs/openapi.yaml</code>)</li>
+                            <li>Ajoutez un moyen de visualisation automatique : Swagger UI, Redoc ou Stoplight</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Utiliser la spec côté front</h3>
+                        <ul>
+                            <li>Le frontend génère ses types et services HTTP directement depuis la spec</li>
+                            <li>Cela évite les divergences entre ce que le back renvoie et ce que le front attend</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Implémenter le backend</h3>
+                        <ul>
+                            <li>Le backend code les routes en se conformant strictement à la spec</li>
+                            <li>Chaque endpoint doit respecter les schémas de requêtes et réponses définis</li>
+                            <li>Si la spec change, on incrémente la version (ex: v1.1) et on documente le changement</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bonus Section -->
+        <section id="bonus" class="section">
+            <div class="section-header">
+                <h2 class="section-title">🧪 Bonus – Mock et tests rapides</h2>
+            </div>
+            
+            <div class="content-card">
+                <p>Avant que le backend soit prêt, vous pouvez simuler les réponses de l'API grâce à la spec :</p>
+                <ul>
+                    <li>Utilisez <strong>Prism</strong> ou <strong>Swagger Mock Server</strong> pour générer un serveur mock</li>
+                    <li>Cela permet au frontend de tester son intégration même sans backend fonctionnel</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Livrables Section -->
+        <section id="livrables" class="section">
+            <div class="section-header">
+                <h2 class="section-title">🧩 Livrables attendus pour l'équipe</h2>
+            </div>
+            
+            <div class="table-wrapper">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Élément</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>openapi.yaml</code></td>
+                            <td>Spécification complète de l'API</td>
+                        </tr>
+                        <tr>
+                            <td>Documentation</td>
+                            <td>Swagger UI / Redoc accessible</td>
+                        </tr>
+                        <tr>
+                            <td>Postman Collection</td>
+                            <td>Synchronisée automatiquement depuis la spec</td>
+                        </tr>
+                        <tr>
+                            <td>Types générés</td>
+                            <td>Types utilisés côté front à partir de la spec</td>
+                        </tr>
+                        <tr>
+                            <td>Versioning</td>
+                            <td>Numéro de version et changelog en cas de modification</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Résumé Section -->
+        <section id="resume" class="section">
+            <div class="summary-box">
+                <h2>💬 En résumé</h2>
+                <p><strong>L'API First, c'est concevoir avant de coder.</strong></p>
+                <p>C'est une démarche de collaboration et de rigueur :</p>
+                <ul>
+                    <li>Une communication claire entre les équipes front et back</li>
+                    <li>Une documentation fiable et toujours à jour</li>
+                    <li>Un gain de temps énorme à long terme</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="../assets/images/logo.jpeg" alt="YNOV Campus" class="footer-logo-img">
+                        <span class="footer-logo-text">Coordination Front & Back</span>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="../index.html">Accueil</a></li>
+                        <li><a href="../index.html#programme">Programme</a></li>
+                        <li><a href="../index.html#projet">Projet API First</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Ressources</h3>
+                    <ul>
+                        <li><a href="api-first.html">Guide API First</a></li>
+                        <li><a href="deliverables.html">Livrables</a></li>
+                        <li><a href="testing.html">Tests</a></li>
+                        <li><a href="deployment.html">Déploiement</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> contact@ynov.com</p>
+                        <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Campus Ynov</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 YNOV Campus. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>
+        // Auto-détection et coloration de tous les blocs de code
+        document.addEventListener('DOMContentLoaded', function() {
+            hljs.highlightAll();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tests FE/BE - Coordination Front & Back</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../assets/images/logo.jpeg" alt="YNOV Campus" class="logo-img">
+                <span class="logo-text">Coordination Front & Back</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#programme" class="nav-link">Programme</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#projet" class="nav-link">Projet API First</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">
+                        <i class="fas fa-calendar-alt"></i> Ressources
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="api-first.html" class="dropdown-item">Guide API First</a>
+                        <a href="gitflow.html" class="dropdown-item">GitFlow & Agile</a>
+                        <a href="project-management.html" class="dropdown-item">Gestion de Projet</a>
+                        <a href="deliverables.html" class="dropdown-item">Livrables</a>
+                        <a href="testing.html" class="dropdown-item active">Tests</a>
+                        <a href="deployment.html" class="dropdown-item">Déploiement</a>
+                        <a href="github-workflow.html" class="dropdown-item">GitHub Workflow</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Tests FE/BE</h1>
+                <h2 class="hero-subtitle">Unitaires, intégration, e2e</h2>
+                <p class="hero-description">
+                    Maîtrisez les différentes stratégies de tests pour assurer la qualité de votre application frontend et backend.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#definitions" class="btn btn-primary">
+                        <i class="fas fa-info-circle"></i>
+                        Comprendre les types
+                    </a>
+                    <a href="#strategies" class="btn btn-primary">
+                        <i class="fas fa-chart-line"></i>
+                        Choisir sa stratégie
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Definitions Section -->
+        <section id="definitions" class="section">
+            <div class="section-header">
+                <h2 class="section-title">📚 FE vs BE — définitions rapides</h2>
+            </div>
+            
+            <div class="definitions-grid">
+                <div class="definition-card frontend">
+                    <div class="definition-header">
+                        <i class="fas fa-desktop"></i>
+                        <h3>Frontend (FE)</h3>
+                    </div>
+                    <div class="definition-content">
+                        <p>Code exécuté côté client (navigateur/app), UI/UX, état local, appels API.</p>
+                        <ul>
+                            <li>Interactions utilisateur</li>
+                            <li>Interface utilisateur</li>
+                            <li>État local de l'application</li>
+                            <li>Appels API</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="definition-card backend">
+                    <div class="definition-header">
+                        <i class="fas fa-server"></i>
+                        <h3>Backend (BE)</h3>
+                    </div>
+                    <div class="definition-content">
+                        <p>Code côté serveur, logique métier, accès base de données, sécurité, API.</p>
+                        <ul>
+                            <li>Logique métier</li>
+                            <li>Accès aux données</li>
+                            <li>Sécurité et authentification</li>
+                            <li>API REST</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="objective-box">
+                <p>
+                    <strong>Pourquoi distinguer ?</strong> Les risques et outils diffèrent : le FE teste interactions UI/DOM et flux utilisateurs, 
+                    le BE teste règles métier, persistance et contrats d'API.
+                </p>
+            </div>
+        </section>
+
+        <!-- Test Types Section -->
+        <section id="test-types" class="section">
+            <div class="section-header">
+                <h2 class="section-title">🧪 Types de tests</h2>
+            </div>
+            
+            <!-- Unit Tests -->
+            <div class="test-type-card">
+                <div class="test-type-header">
+                    <div class="test-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <div class="test-info">
+                        <h3>Tests unitaires</h3>
+                        <p class="test-description">Tester une unité de code isolée sans dépendances externes réelles</p>
+                    </div>
+                </div>
+                
+                <div class="test-content">
+                    <div class="test-benefits">
+                        <h4>Pourquoi ?</h4>
+                        <p>Rapides, détectent les régressions locales, documentent la logique métier.</p>
+                    </div>
+                    
+                    <div class="test-examples">
+                        <div class="example-section">
+                            <h4>Frontend</h4>
+                            <ul>
+                                <li>Valider un utilitaire de formatage de prix</li>
+                                <li>Tester un composant pur (render d'un titre selon props) avec mocks</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="example-section">
+                            <h4>Backend</h4>
+                            <ul>
+                                <li>Valider une règle métier (calcul de remise, quotas) sans DB réelle</li>
+                                <li>Tester un service qui transforme un DTO</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="test-tools">
+                        <h4>Outils typiques</h4>
+                        <div class="tools-tags">
+                            <span class="tool-tag">Jest/Vitest</span>
+                            <span class="tool-tag">Testing Library</span>
+                            <span class="tool-tag">pytest</span>
+                            <span class="tool-tag">JUnit</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Integration Tests -->
+            <div class="test-type-card">
+                <div class="test-type-header">
+                    <div class="test-icon">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <div class="test-info">
+                        <h3>Tests d'intégration</h3>
+                        <p class="test-description">Tester l'interaction entre plusieurs modules réels dans un environnement proche de la réalité</p>
+                    </div>
+                </div>
+                
+                <div class="test-content">
+                    <div class="test-benefits">
+                        <h4>Pourquoi ?</h4>
+                        <p>Attrapent les problèmes d'assemblage (schémas, transactions, configuration), valident les contrats d'API.</p>
+                    </div>
+                    
+                    <div class="test-examples">
+                        <div class="example-section">
+                            <h4>Frontend</h4>
+                            <ul>
+                                <li>Tester un hook qui fait un fetch vers une API mockée locale</li>
+                                <li>Tester une page qui compose plusieurs composants et requêtes</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="example-section">
+                            <h4>Backend</h4>
+                            <ul>
+                                <li>Tester un endpoint REST contre une DB ephemeral</li>
+                                <li>Vérifier validation, codes HTTP, modèle d'erreurs</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="test-tools">
+                        <h4>Outils typiques</h4>
+                        <div class="tools-tags">
+                            <span class="tool-tag">MSW</span>
+                            <span class="tool-tag">Testcontainers</span>
+                            <span class="tool-tag">supertest</span>
+                            <span class="tool-tag">pytest</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- E2E Tests -->
+            <div class="test-type-card">
+                <div class="test-type-header">
+                    <div class="test-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="test-info">
+                        <h3>Tests end-to-end (e2e)</h3>
+                        <p class="test-description">Simuler le parcours utilisateur complet à travers l'app dans un navigateur automatisé</p>
+                    </div>
+                </div>
+                
+                <div class="test-content">
+                    <div class="test-benefits">
+                        <h4>Pourquoi ?</h4>
+                        <p>Garantissent que le flux critique marche "de bout en bout" (auth, navigation, API, rendu, stockage).</p>
+                    </div>
+                    
+                    <div class="test-examples">
+                        <div class="example-section">
+                            <h4>Exemples</h4>
+                            <ul>
+                                <li>Un utilisateur parcourt la liste → détail → ajoute au panier → passe commande</li>
+                                <li>Démarrer l'API, frapper les endpoints principaux via HTTP</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="test-tools">
+                        <h4>Outils typiques</h4>
+                        <div class="tools-tags">
+                            <span class="tool-tag">Cypress</span>
+                            <span class="tool-tag">Playwright</span>
+                            <span class="tool-tag">Postman/Newman</span>
+                            <span class="tool-tag">k6</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategies Section -->
+        <section id="strategies" class="section">
+            <div class="section-header">
+                <h2 class="section-title">🎯 Choisir le bon mix (et viser ≥ 50% de coverage)</h2>
+            </div>
+            
+            <div class="strategies-grid">
+                <div class="strategy-card">
+                    <div class="strategy-header">
+                        <i class="fas fa-brain"></i>
+                        <h3>Règles métier complexes</h3>
+                    </div>
+                    <div class="strategy-content">
+                        <p>Prioriser les tests unitaires (BE) + quelques intégrations DB</p>
+                        <div class="strategy-mix">
+                            <div class="mix-item">
+                                <span class="mix-percentage">70%</span>
+                                <span class="mix-type">Unitaires</span>
+                            </div>
+                            <div class="mix-item">
+                                <span class="mix-percentage">25%</span>
+                                <span class="mix-type">Intégration</span>
+                            </div>
+                            <div class="mix-item">
+                                <span class="mix-percentage">5%</span>
+                                <span class="mix-type">E2E</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="strategy-card">
+                    <div class="strategy-header">
+                        <i class="fas fa-plug"></i>
+                        <h3>Intégrations externes</h3>
+                    </div>
+                    <div class="strategy-content">
+                        <p>Prioriser intégration (mocks contrôlés) + e2e smoke</p>
+                        <div class="strategy-mix">
+                            <div class="mix-item">
+                                <span class="mix-percentage">40%</span>
+                                <span class="mix-type">Unitaires</span>
+                            </div>
+                            <div class="mix-item">
+                                <span class="mix-percentage">45%</span>
+                                <span class="mix-type">Intégration</span>
+                            </div>
+                            <div class="mix-item">
+                                <span class="mix-percentage">15%</span>
+                                <span class="mix-type">E2E</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="strategy-card">
+                    <div class="strategy-header">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>Application UI/UX</h3>
+                    </div>
+                    <div class="strategy-content">
+                        <p>Plus d'e2e ciblés sur parcours critiques, avec unitaires FE pour logique de présentation</p>
+                        <div class="strategy-mix">
+                            <div class="mix-item">
+                                <span class="mix-percentage">50%</span>
+                                <span class="mix-type">Unitaires</span>
+                            </div>
+                            <div class="mix-item">
+                                <span class="mix-percentage">20%</span>
+                                <span class="mix-type">Intégration</span>
+                            </div>
+                            <div class="mix-item">
+                                <span class="mix-percentage">30%</span>
+                                <span class="mix-type">E2E</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="strategy-tips">
+                <h3>💡 Stratégie type recommandée</h3>
+                <div class="tips-content">
+                    <p><strong>60% unit, 30% intégration, 10% e2e</strong> — ajuster selon risques.</p>
+                    <p>Quelques e2e "smoke" stables, plutôt que beaucoup de tests fragiles.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contract First Integration -->
+        <section id="contract-first" class="section">
+            <div class="section-header">
+                <h2 class="section-title">🔗 Liens avec le contract-first</h2>
+            </div>
+            
+            <div class="contract-benefits">
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h4>Spec OpenAPI guide les tests</h4>
+                        <p>La spécification OpenAPI guide les tests d'intégration (codes, schémas, erreurs)</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h4>Génération de types</h4>
+                        <p>Générer des clients/types depuis la spec réduit les mocks incohérents</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h4>Tests de contrat</h4>
+                        <p>Option avancée : tests de contrat (Pact) pour valider que le BE respecte ce que le FE consomme</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools Section -->
+        <section id="tools" class="section">
+            <div class="section-header">
+                <h2 class="section-title">🛠️ Outils recommandés</h2>
+            </div>
+            
+            <div class="tools-grid">
+                <div class="tool-category">
+                    <h3>Frontend</h3>
+                    <div class="tool-items">
+                        <div class="tool-item">
+                            <span class="tool-name">Jest/Vitest</span>
+                            <span class="tool-purpose">Tests unitaires</span>
+                        </div>
+                        <div class="tool-item">
+                            <span class="tool-name">Testing Library</span>
+                            <span class="tool-purpose">Tests de composants</span>
+                        </div>
+                        <div class="tool-item">
+                            <span class="tool-name">MSW</span>
+                            <span class="tool-purpose">Mock API</span>
+                        </div>
+                        <div class="tool-item">
+                            <span class="tool-name">Cypress/Playwright</span>
+                            <span class="tool-purpose">Tests E2E</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tool-category">
+                    <h3>Backend</h3>
+                    <div class="tool-items">
+                        <div class="tool-item">
+                            <span class="tool-name">Jest/Vitest/pytest</span>
+                            <span class="tool-purpose">Tests unitaires</span>
+                        </div>
+                        <div class="tool-item">
+                            <span class="tool-name">Testcontainers</span>
+                            <span class="tool-purpose">Tests avec DB</span>
+                        </div>
+                        <div class="tool-item">
+                            <span class="tool-name">supertest</span>
+                            <span class="tool-purpose">Tests d'API</span>
+                        </div>
+                        <div class="tool-item">
+                            <span class="tool-name">Postman/Newman</span>
+                            <span class="tool-purpose">Tests E2E API</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="../assets/images/logo.jpeg" alt="YNOV Campus" class="footer-logo-img">
+                        <span class="footer-logo-text">Coordination Front & Back</span>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="../index.html">Accueil</a></li>
+                        <li><a href="../index.html#programme">Programme</a></li>
+                        <li><a href="../index.html#projet">Projet API First</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Ressources</h3>
+                    <ul>
+                        <li><a href="api-first.html">Guide API First</a></li>
+                        <li><a href="gitflow.html">GitFlow & Agile</a></li>
+                        <li><a href="project-management.html">Gestion de Projet</a></li>
+                        <li><a href="deliverables.html">Livrables</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> contact@ynov.com</p>
+                        <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Campus Ynov</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 YNOV Campus. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            hljs.highlightAll();
+        });
+    </script>
+</body>
+</html>
