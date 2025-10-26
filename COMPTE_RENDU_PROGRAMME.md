@@ -151,7 +151,7 @@ Les étudiants choisissent leur projet parmi les suggestions suivantes :
 - [ ] README complet
 
 ---
-
+ s
 ## 🔄 Cérémonies et processus
 
 ### Daily
